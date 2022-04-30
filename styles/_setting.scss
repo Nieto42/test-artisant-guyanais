@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;800;900&display=swap");
+$font-1: "Inter", sans-serif;
+
+$white: #ffffff;
+$dark: #575757;
+$color-1: #ffea52;
+
+$gradientDark: linear-gradient(180deg, #31384a 0%, #484843 100%);
+
+$shadow: 15px 50px 80px 15px rgba(151, 108, 0, 0.14);
+$shadow2: 0px 50px 80px 5px rgba(151, 109, 0, 0.15);
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+@mixin container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1202px;
+  width: 100%;
+}
+
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
