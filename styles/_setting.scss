@@ -2,7 +2,7 @@
 $font-1: "Inter", sans-serif;
 
 $white: #ffffff;
-$dark: #575757;
+$dark: #353643;
 $color-1: #ffea52;
 
 $gradientDark: linear-gradient(180deg, #31384a 0%, #484843 100%);
@@ -83,6 +83,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  color: #353643;
 }
 
 img,
@@ -109,6 +110,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  color: #353643;
 }
 
 #root,

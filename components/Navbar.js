@@ -22,18 +22,18 @@ export default function Navbar() {
             src={"/Logo artisan guyanais.svg"}
             alt="Logo RPS agriculture"
             loading="lazy"
-            width={48}
-            height={48}
+            width={62}
+            height={62}
           />
-          <p>Artisant Guyanais</p>
+          <p>Artisans Guyanais</p>
         </div>
         <Image
           src={"/bars.svg"}
           onClick={handleMenu}
           className="menu_bars"
           alt="Menu Bars"
-          width={48}
-          height={48}
+          width={42}
+          height={42}
         />
 
         <ul className="menu">
@@ -66,8 +66,8 @@ export default function Navbar() {
               className="menu_close"
               onClick={handleMenu}
               alt="Menu Bars"
-              width={48}
-              height={48}
+              width={42}
+              height={42}
             />
           </div>
           {Itemnav.map((item, links) => {
