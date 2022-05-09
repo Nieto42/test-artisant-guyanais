@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="logo">
           <Image
             src={"/Logo artisan guyanais.svg"}
-            alt="Logo RPS agriculture"
+            alt="Logo Artisans guyanais"
             loading="lazy"
             width={62}
             height={62}

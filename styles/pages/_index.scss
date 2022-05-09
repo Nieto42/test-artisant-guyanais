@@ -1,5 +1,5 @@
 .home {
-  padding-top: 20px;
+  padding-top: 40px;
 
   .hero-title {
     .Typewriter__wrapper {
@@ -13,7 +13,17 @@
     .btn-hero,
     .btn-hero-2 {
       padding: 5px 10px 5px 10px;
-      background: #fff;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+
+    .btn-hero {
+      background-color: $color-1;
+    }
+    .btn-hero-2 {
+      background-color: #fff;
+      border: solid 3px $color-1;
+      margin-bottom: 20px;
     }
   }
 }
