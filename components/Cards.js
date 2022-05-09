@@ -13,13 +13,15 @@ export default function Cards({ info }) {
             layout="fixed"
             width={112}
             height={115}
+            className="img"
           />
           <div className="container-name">
             <h2>{info.name}</h2>
             <h3>{info.Job}</h3>
             <div className="container-vote">
               <h4>
-                {info.Vote} <span>⭐</span> {info.top ? true : " Top Artisan"}
+                {info.Vote} <span>★</span>{" "}
+                {info.top ? <p className="top"> Top Artisan</p> : " "}
               </h4>
             </div>
           </div>
@@ -27,9 +29,13 @@ export default function Cards({ info }) {
 
         <div className="container-services">
           <p>Services :</p>
-          <ul>
+          <ul className="list-services">
             {info.Services.map((services) => {
-              return <li key={services}>{services}</li>;
+              return (
+                <li key={services} className="item-services">
+                  {services}
+                </li>
+              );
             })}
           </ul>
         </div>
@@ -48,12 +54,13 @@ export default function Cards({ info }) {
           <button className="btn-contact">
             <a href={info.Phone} target="_blank" rel="noopener noreferrer">
               <Image
-                src="/whatsapp.svg"
+                src="/whatsapp-white-color.svg"
                 alt="icon whatzapp des artisans"
                 loading="lazy"
                 layout="fixed"
                 width={24}
                 height={24}
+                className="img-what"
               />
               Contactez
             </a>
