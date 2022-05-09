@@ -8,6 +8,23 @@ export default function Form({ artisans }) {
     setProData(artisans);
   }, []);
 
+  const [search, setSearch] = useState([]);
+
+  // const search = (e) => {
+  //   const defaultData = proData;
+  //   if (e.target.value == "") {
+  //     defaultData = proData
+  //   } else
+  //   {
+  //     defaultData = proData.filter(artisans => {
+  //       return (
+  //         artisans.Services
+  //       )
+  //     })
+  //   }
+
+  // };
+
   return (
     <div className="form-component">
       <div className="form-container">
@@ -17,6 +34,7 @@ export default function Form({ artisans }) {
             name="data-art"
             id="seach-input"
             placeholder="Entrez un besoin"
+            onChange={(e) => setSearch(e.target.value)}
           />
           <button type="submit" className="btn">
             Rechercher
