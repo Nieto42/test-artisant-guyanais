@@ -8,22 +8,18 @@ export default function Form({ artisans }) {
     setProData(artisans);
   }, []);
 
-  const [search, setSearch] = useState([]);
-
-  // const search = (e) => {
-  //   const defaultData = proData;
-  //   if (e.target.value == "") {
-  //     defaultData = proData
-  //   } else
-  //   {
-  //     defaultData = proData.filter(artisans => {
-  //       return (
-  //         artisans.Services
-  //       )
-  //     })
-  //   }
-
-  // };
+  const search = (e) => {
+    if (e.target.value === "") {
+      setProData(artisans);
+    } else {
+      var usuariosFiltrados = proData.filter((usuario) => {
+        return usuario.Services.some((servico) => {
+          return servico.toLowerCase().includes(e.target.value.toLowerCase());
+        });
+      });
+      setProData(usuariosFiltrados);
+    }
+  };
 
   return (
     <div className="form-component">
@@ -34,7 +30,7 @@ export default function Form({ artisans }) {
             name="data-art"
             id="seach-input"
             placeholder="Entrez un besoin"
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={search}
           />
           <button type="submit" className="btn">
             Rechercher
