@@ -36,8 +36,8 @@ export default function Home({ artisans }) {
             Trouvez les meilleurs artisans de saint laurent du maroni pour votre
             besoin.
           </p>
-          <button className="btn-hero">Enregistrer un artisans</button>
-          <button className="btn-hero-2">Notez le travail d'un artisan</button>
+          {/* <button className="btn-hero">Enregistrer un artisans</button>
+          <button className="btn-hero-2">Notez le travail d'un artisan</button> */}
         </div>
         <Form artisans={artisans} />
       </div>

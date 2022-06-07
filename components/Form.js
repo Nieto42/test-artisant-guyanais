@@ -8,14 +8,25 @@ export default function Form({ artisans }) {
     setProData(artisans);
   }, []);
 
+  const [value, setValue] = useState();
+
   const search = (e) => {
-    if (e.target.value === "") {
+    e.preventDefault();
+    if (value === "") {
       setProData(artisans);
     } else {
-      var usuariosFiltrados = proData.filter((usuario) => {
-        return usuario.Services.some((servico) => {
-          return servico.toLowerCase().includes(e.target.value.toLowerCase());
+      var usuariosFiltrados = artisans.filter((usuario) => {
+        const newData = Object.keys(usuario).map((item) => {
+          if (typeof usuario[item] !== "string") return;
+
+          if (value.toLowerCase() == usuario[item].toLowerCase()) {
+            return true;
+          } else {
+            return false;
+          }
         });
+        console.log(newData);
+        return newData.id === usuario.id;
       });
       setProData(usuariosFiltrados);
     }
@@ -24,16 +35,17 @@ export default function Form({ artisans }) {
   return (
     <div className="form-component">
       <div className="form-container">
-        <form>
+        <form onSubmit={search}>
           <input
             type="search"
             name="data-art"
             id="seach-input"
             placeholder="Entrez un besoin"
-            onChange={search}
+            onChange={(e) => setValue(e.target.value)}
+            value={value}
           />
           <button type="submit" className="btn">
-            Rechercher
+            Search
           </button>
         </form>
         {/* bouton pour trier du meilleur au pire */}
